@@ -3,7 +3,7 @@
 // import { useEffect, useState } from "react";
 
 export default async function Home() {
-  const response = await fetch("http://localhost:5176")
+  const response = await fetch(process.env.BACKEND_ADDRESS as string)
   const data = await response.text()
   
   // const [data, setData] = useState<string | null>(null)
